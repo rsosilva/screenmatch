@@ -6,3 +6,4 @@ public class Filme {
     int totalDeAvaliacao;
     int duracaoEmMinutos;
 }
+
