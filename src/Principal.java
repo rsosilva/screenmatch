@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -20,6 +21,11 @@ public class Principal {
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         lost.exibeFichaTecnica();
-        //System.out.println("Para maratonar: "+ lost.getDuracaoEmMinutos() + " min");
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(lost);
+
+        System.out.println("Para maratonar filmes e séries: "+ calculadora.getTempoTotal());
     }
 }
