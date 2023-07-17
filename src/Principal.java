@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -10,8 +11,15 @@ public class Principal {
         meuFilme.avalia(8);
         meuFilme.avalia(9.5);
         meuFilme.avalia(6.3);
-
         meuFilme.exibeFichaTecnica();
 
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(50);
+        lost.exibeFichaTecnica();
+        //System.out.println("Para maratonar: "+ lost.getDuracaoEmMinutos() + " min");
     }
 }
