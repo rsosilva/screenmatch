@@ -8,6 +8,18 @@ public class Filme {
     private int totalDeAvaliacao;
     private int duracaoEmMinutos;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -25,10 +37,11 @@ public class Filme {
     }
     public void exibeFichaTecnica(){
         System.out.println("**************** Ficha técnica ******************");
-        System.out.println("br.com.alura.screenmatch.modelos.Filme: " + this.nome);
-        System.out.println("Ano de Lançamento: " + this.anoDeLancamento);
+        System.out.println("br.com.alura.screenmatch.modelos.Filme: " + this.getNome());
+        System.out.println("Ano de Lançamento: " + this.getAnoDeLancamento());
         System.out.println("Media Avaliações: " + this.pegaMedia());
         System.out.println("Total de Avaliações: " + this.getTotalDeAvaliacao());
+        System.out.println("Duração: " + this.getDuracaoEmMinutos() +" min");
         System.out.println("*************************************************");
     }
     public void avalia(double nota){
