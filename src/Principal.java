@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -39,5 +41,22 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
+        var filmeDoRenato = new Filme();
+        filmeDoRenato.setNome("Rocky V");
+        filmeDoRenato.avalia(10);
+        filmeDoRenato.setAnoDeLancamento(1996);
+
+        //System.out.println(filmeDoRenato.getNome());
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoRenato);
+        listaDeFilmes.add(meuFilme);
+
+        //System.out.println("Primeiro filme = " + listaDeFilmes.get(0).getNome());
+        for (int i = 0; i < listaDeFilmes.size(); i++) {
+            System.out.println("Filme " + i + " = " + listaDeFilmes.get(i).getNome());
+        }
+
+        System.out.println(listaDeFilmes);
     }
 }
