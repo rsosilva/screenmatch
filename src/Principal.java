@@ -8,9 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("Poderoso Chefão",1970);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.avalia(8);
@@ -18,9 +16,7 @@ public class Principal {
         meuFilme.avalia(6.3);
         meuFilme.exibeFichaTecnica();
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
@@ -41,10 +37,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoRenato = new Filme();
-        filmeDoRenato.setNome("Rocky V");
+        var filmeDoRenato = new Filme("Rocky V",1995);
         filmeDoRenato.avalia(10);
-        filmeDoRenato.setAnoDeLancamento(1996);
 
         //System.out.println(filmeDoRenato.getNome());
 
